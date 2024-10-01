@@ -11,12 +11,12 @@ esac
 echo "finished installation"
 
 echo "stated symlinks..."
+
 # symlink .zshrc
 ln -f -s "$PWD/.zshrc" $HOME/.zshrc
 
 # symlink nvim config
-mkdir -p $HOME/.config
-ln -f -s "$PWD/nvim/" $HOME/.config/
+source "./nvim.sh"
 
 echo "finished symlinks"
 

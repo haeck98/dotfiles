@@ -1,4 +1,4 @@
-if [[ ! -z $(command -v yay) ]] ; then
+if [[ ! -z $(command -v pacman) ]] ; then
 	echo "Installing for Arch Linux"
 
 	bash "$(dirname $0)/arch.sh"

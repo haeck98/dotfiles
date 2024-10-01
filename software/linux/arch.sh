@@ -13,7 +13,7 @@ nvm install stable
 nvm use stable
 
 # neovim
-yay -Sy neovim=0.9
+sudo pacman -Sy neovim=0.9
 
 # tmux
-yay -Sy tmux
+sudo pacman -Sy tmux
