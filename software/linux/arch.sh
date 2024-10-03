@@ -12,8 +12,10 @@ export NVM_DIR="$HOME/.nvm"
 nvm install stable
 nvm use stable
 
-# neovim
+npm i -g neovim tree-sitter
+yay -Sy python
+
 yay -Sy neovim=0.9
 
-# tmux
 yay -Sy tmux
+yay -Sy alacritty
