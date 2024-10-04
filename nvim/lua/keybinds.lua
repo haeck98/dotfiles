@@ -21,7 +21,8 @@ local mapKey = function(opts)
     end
 end
 
-mapKey{desc="save all", "n", "<Leader>w", ":wa<CR>"}
+mapKey{desc="save", "n", "<Leader>w", ":w<CR>"}
+mapKey{desc="save all", "n", "<Leader>wa", ":wa<CR>"}
 mapKey{desc="quit", "n", "<Leader>q", ":q<CR>"}
 mapKey{desc="quit all", "n", "<Leader>qa", ":wa<CR>:qa<CR>"}
 

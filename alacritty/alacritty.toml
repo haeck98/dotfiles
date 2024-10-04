@@ -4,3 +4,12 @@ shell = "/bin/zsh"
 [window]
 padding = { x = 5, y = 5 }
 dynamic_padding = true
+
+[colors.primary]
+background = "#2e2e2e"
+
+[font]
+normal = { family="FiraCode" }
+
+[mouse]
+hide_when_typing = true
