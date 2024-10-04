@@ -20,3 +20,4 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 export CHROME_EXECUTABLE=chrome
 
+export LANG=de_DE.UTF-8
