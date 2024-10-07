@@ -26,6 +26,7 @@ fi
 # neovim dependencies
 install "neovim"
 install "python"
+install "fzf"
 npm i -g neovim tree-sitter
 
 # tools
