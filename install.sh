@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+export DOWNLOAD_DIR="$(realpath "$(dirname $0)")/../download"
+
 echo "started installation..."
 
 case "$OSTYPE" in
