@@ -2,7 +2,7 @@ echo "Installing for Arch Linux"
 
 if [[ ! -z $(command -v pacman) ]] ; then
     echo "using pacman"
-    source "$(dirname $0)/arch.sh"
+    source "$(dirname $0)/pacman.sh"
 else
     echo "Can't determine package manager to use..."
     exit
