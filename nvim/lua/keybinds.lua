@@ -37,8 +37,8 @@ mapKey{desc="focus nvim-tree", "n", "<Leader>e", ":NvimTreeFocus<CR>"}
 mapKey{desc="find file nvim-tree", "n", "<Leader>f", ":NvimTreeFindFile<CR>"}
 
 -- Insert Mode
-mapKey{desc="insert line below", {"i","n"}, "<C-k>", "<Esc>O"}
-mapKey{desc="insert line above", {"i","n"}, "<C-j>", "<Esc>o"}
+mapKey{desc="insert line below", {"i","n"}, "<C-k>", "<Esc>O", silent = false}
+mapKey{desc="insert line above", {"i","n"}, "<C-j>", "<Esc>o", silent = false}
 
 -- insert lines above/below cursor
 -- mapKey{desc="move current line up", "n", "<A-k>", ":move -2<CR>"}
