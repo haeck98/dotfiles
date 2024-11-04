@@ -21,3 +21,7 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export CHROME_EXECUTABLE=chrome
 
 export LANG=de_DE.UTF-8
+
+if [ -f "/home/haeck98/.deno/env" ]; then
+    . "/home/haeck98/.deno/env"
+fi
