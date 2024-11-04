@@ -25,3 +25,13 @@ export LANG=de_DE.UTF-8
 if [ -f "/home/haeck98/.deno/env" ]; then
     . "/home/haeck98/.deno/env"
 fi
+
+# open CWD if opened by a new Windows Terminal Tab
+chpwd() {
+    [[ -n "$WT_SESSION" ]] && {
+        echo -en '\e]9;9;"'
+        wslpath -w "$PWD" | tr -d '\n'
+        echo -en '"\x07'
+    }
+}
+
