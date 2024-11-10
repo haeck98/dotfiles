@@ -35,6 +35,7 @@ return {
 		    },
 		},
 		filetypes = {
+		    cmake = true,
 		    yaml = false,
 		    markdown = false,
 		    help = false,
