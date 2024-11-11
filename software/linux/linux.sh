@@ -1,5 +1,7 @@
 echo "Installing for Arch Linux"
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 if [[ ! -z $(command -v pacman) ]] ; then
     echo "using pacman"
     source "$(dirname $0)/pacman.sh"

@@ -65,6 +65,3 @@ mapKey{"n", "<Leader><Leader>", function()
     require("telescope.builtin").buffers({ sort_lastused = true, ignore_current_buffer = true })
 end}
 
--- LSP
-mapKey{desc="Go to declaration", "n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>"}
-mapKey{desc="Go to definition", "n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>"}
