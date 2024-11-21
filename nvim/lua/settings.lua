@@ -23,3 +23,5 @@ vim.o.smartcase = true
 vim.o.hlsearch = false
 vim.g.wrap = true
 vim.g.wrapindent = true
+
+vim.opt.scrolloff = 5
