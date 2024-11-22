@@ -18,5 +18,8 @@ ln -f -s "$PWD/alacritty/" $HOME/.config/
 # symlink ghostty config
 ln -f -s "$PWD/ghostty/" $HOME/.config/
 
+# symlink nvim config
+ln -f -s "$PWD/.tmux.conf" $HOME/.tmux.conf
+
 echo "finished symlinks"
 
