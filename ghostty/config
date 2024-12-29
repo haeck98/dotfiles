@@ -1,0 +1,8 @@
+font-family = "Fira Code"
+background = #2e2e2e
+cursor-style = block
+mouse-hide-while-typing = true
+command = "/bin/zsh"
+window-padding-x = 5
+window-padding-y = 5
+window-padding-balance = true
