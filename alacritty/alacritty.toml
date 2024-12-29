@@ -1,4 +1,3 @@
-shell = "/bin/zsh"
 
 
 [window]
@@ -13,3 +12,6 @@ normal = { family="FiraCode" }
 
 [mouse]
 hide_when_typing = true
+
+[terminal]
+shell = "/bin/zsh"
