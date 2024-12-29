@@ -12,4 +12,4 @@ normal = { family="FiraCode" }
 hide_when_typing = true
 
 [terminal]
-shell = "/bin/zs"
+shell = "/bin/zsh"
