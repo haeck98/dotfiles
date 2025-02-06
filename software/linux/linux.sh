@@ -31,15 +31,16 @@ install "python"
 install "fzf"
 npm i -g neovim tree-sitter
 
-if [[ ! -e "~/.local/share/nvim/vscode-js-debug" ]]; then
-    CURRENT_PWD_STORE=$(pwd)
-
-    git clone https://github.com/microsoft/vscode-js-debug.git ~/.local/share/nvim/vscode-js-debug
-    cd ~/.local/share/nvim/vscode-js-debug
-    npm install --legacy-peer-deps
-    npm run compile
-    cd $CURRENT_PWD_STORE
-fi
+# TODO: install vscode-js-debug for nvim dap
+# if [[ ! -e "~/.local/share/nvim/vscode-js-debug" ]]; then
+#     CURRENT_PWD_STORE=$(pwd)
+#
+#     git clone https://github.com/microsoft/vscode-js-debug.git ~/.local/share/nvim/vscode-js-debug
+#     cd ~/.local/share/nvim/vscode-js-debug
+#     npm install --legacy-peer-deps
+#     npm run compile
+#     cd $CURRENT_PWD_STORE
+# fi
 
 # tools
 install "tmux"
