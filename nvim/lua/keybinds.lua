@@ -65,3 +65,10 @@ mapKey{"n", "<Leader><Leader>", function()
     require("telescope.builtin").buffers({ sort_lastused = true, ignore_current_buffer = true })
 end}
 
+-- DAP
+mapKey{desc="continue", "n", "<F5>", ":lua require'dap'.continue()<CR>"}
+mapKey{desc="toggle breakpoint", "n", "<F9>", ":lua require'dap'.toggle_breakpoint()<CR>"}
+mapKey{desc="step over", "n", "<F10>", ":lua require'dap'.step_over()<CR>"}
+mapKey{desc="step into", "n", "<F11>", ":lua require'dap'.step_into()<CR>"}
+mapKey{desc="terminate", "n", "<F12>", ":lua require'dap'.terminate()<CR>"}
+
