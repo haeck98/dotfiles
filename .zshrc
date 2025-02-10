@@ -36,3 +36,9 @@ chpwd() {
     }
 }
 
+fzd() {
+    # get arguments
+    local start_dir="${1:-.}"  # Default to current directory if no argument is given
+
+    cd "$(fd --type d --hidden --exclude .git --ignore-file .gitignore . "$start_dir" | fzf)"
+}
