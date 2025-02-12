@@ -34,7 +34,7 @@ mapKey{desc="quit all", "n", "<Leader>qa", ":qa<CR>"}
 
 -- NvimTree
 mapKey{desc="focus nvim-tree", "n", "<Leader>e", ":NvimTreeFocus<CR>"}
-mapKey{desc="find file nvim-tree", "n", "<Leader>f", ":NvimTreeFindFile<CR>"}
+mapKey{desc="find file nvim-tree", "n", "<Leader>ff", ":NvimTreeFindFile<CR>"}
 
 -- Insert Mode
 mapKey{desc="insert line below", {"i","n"}, "<C-k>", "<Esc>O", silent = false}
