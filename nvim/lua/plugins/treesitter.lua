@@ -33,4 +33,12 @@ return {
 	    require("nvim-treesitter.configs").setup(opts)
 	end,
     },
+    {
+	"folke/ts-comments.nvim",
+	opts = {
+	    lang = {
+		angular = "<!-- %s -->",
+	    }
+	}
+    },
 }

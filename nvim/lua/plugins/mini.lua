@@ -63,6 +63,9 @@ return {
     },
     config = function(_, opts)
       require("mini.files").setup(opts)
+
+      -- setup pressing enter opens the file and closes mini.files
+      vim.api.nvim_set_keymap("n", "<CR>", "<cmd>lua require('mini.files').open_file()<CR>", { noremap = true, silent = true })
     end,
   },
 }
