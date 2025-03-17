@@ -37,6 +37,9 @@ exec --no-startup-id xset s noblank
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # lock screen
+    bindsym $mod+Ctrl+l exec i3lock -c 000000
+
     # Floating modifier
     floating_modifier $mod
 
