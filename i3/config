@@ -18,11 +18,23 @@ exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/sway/Sway_Wallp
 exec_always --no-startup-id picom -b -f --config ~/.config/picom/picom.conf
 exec_always --no-startup-id /usr/lib/gsd-xsettings
 exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg
-
+exec_always --no-startup-id dex --autostart --environment i3
 
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s noblank
+
+# volume control
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume "$(pactl get-default-sink)" +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume "$(pactl get-default-sink)" -5% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute "$(pactl get-default-sink)" toggle && $refresh_i3status
+
+# player control
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 ### Key bindings
 #
