@@ -13,6 +13,8 @@ set $term alacritty
 # set $term ghostty
 set $menu dmenu_run
 
+
+
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
 exec_always --no-startup-id picom -b -f --config ~/.config/picom/picom.conf
@@ -179,6 +181,6 @@ bar {
 }
 
 # Input layout (i3 does not manage input directly, use `setxkbmap`)
-exec_always --no-startup-id setxkbmap -layout "de" -variant "colemak" -option "grp:win_space_toggle"
+exec_always --no-startup-id setxkbmap -layout "de" -variant "nodeadkeys" -option "grp:win_space_toggle"
 
 gaps inner 10px
