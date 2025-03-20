@@ -65,6 +65,7 @@ mapKey{"n", "<Leader>ss", ":Telescope lsp_document_symbols<CR>"}
 mapKey{"n", "<Leader>sw", ":Telescope lsp_workspace_symbols<CR>"}
 mapKey{"n", "<Leader>sr", ":Telescope lsp_references<CR>"}
 mapKey{"n", "<Leader>sd", ":Telescope lsp_definitions<CR>"}
+mapKey{"n", "<Leader>st", ":Telescope lsp_type_definitions<CR>"}
 mapKey{"n", "<Leader>sD", ":Telescope diagnostics bufnr=0<CR>"}
 
 mapKey{"n", "<Leader><Leader>", function()
