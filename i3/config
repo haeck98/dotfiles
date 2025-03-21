@@ -13,8 +13,6 @@ set $term alacritty
 # set $term ghostty
 set $menu dmenu_run
 
-
-
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
 exec_always --no-startup-id picom -b -f --config ~/.config/picom/picom.conf
@@ -26,7 +24,8 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s noblank
 
-exec_always NID=0
+# screenshot
+bindsym $mod+Shift+s exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
 
 # volume control
 set $refresh_i3status killall -SIGUSR1 i3status
