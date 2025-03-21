@@ -24,6 +24,9 @@ exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s noblank
 
+# window picker
+bindsym $mod+Tab exec rofi -show window
+
 # screenshot
 bindsym $mod+Shift+s exec --no-startup-id maim -s --format=png | xclip -selection clipboard -t image/png
 
