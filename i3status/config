@@ -23,8 +23,8 @@ order += "memory"
 order += "tztime local"
 
 volume master {
-    format = "Vol:  %volume"
-    format_muted = "Vol: Muted"
+    format = " %volume"
+    format_muted = " Muted"
     device = "default"
     mixer = "Master"
 }
@@ -35,9 +35,8 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-        # format_up = "E: %ip (%speed)"
-        format_up = "E: %ip"
-        format_down = "E: down"
+        format_up = "%ip"
+        format_down = "down"
 }
 
 battery all {

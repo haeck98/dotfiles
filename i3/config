@@ -179,6 +179,10 @@ bar {
     # Status command (using i3status or similar for date/time)
     status_command i3status --config ~/.config/i3status/config
 
+    # Font
+    font pango:monospace 9
+
+
     colors {
         statusline #ffffff
         background #323232
