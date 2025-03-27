@@ -6,6 +6,9 @@ ln -f -s "$PWD/.zshrc" $HOME/.zshrc
 # creating .config folder
 mkdir -p $HOME/.config
 
+# symlink i3status config
+ln -f -s "$PWD/i3status/" $HOME/.config/
+
 # symlink i3 config
 ln -f -s "$PWD/i3/" $HOME/.config/
 
