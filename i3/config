@@ -15,7 +15,7 @@ set $menu dmenu_run
 
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
-exec_always --no-startup-id picom -b -f --config ~/.config/picom/picom.conf
+exec_always --no-startup-id picom -b -f
 exec_always --no-startup-id /usr/lib/gsd-xsettings
 exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg
 exec_always --no-startup-id dex --autostart --environment i3
@@ -26,6 +26,7 @@ exec --no-startup-id xset s noblank
 
 # window picker
 bindsym $mod+Tab exec rofi -show window
+bindsym $mod+Ctrl+r exec zsh -c "$(rofi -dmenu -p 'Run Command')"
 
 # screenshot
 bindsym $mod+Shift+s exec --no-startup-id maim -s --format=png | xclip -selection clipboard -t image/png
@@ -46,106 +47,107 @@ bindsym XF86AudioPrev exec playerctl previous
 #
 # Basics:
 #
-    # Start a terminal
-    bindsym $mod+Return exec $term
+# Start a terminal
+bindsym $mod+Return exec $term
 
-    # Kill focused window
-    bindsym $mod+Shift+q kill
+# Kill focused window
+bindsym $mod+Shift+q kill
 
-    # Start your launcher
-    bindsym $mod+d exec $menu
+# Start your launcher
+bindsym $mod+d exec $menu
 
-    # lock screen
-    bindsym $mod+Ctrl+l exec i3lock -c 000000
+# lock screen
+bindsym $mod+Ctrl+l exec i3lock -c 000000
 
-    # Floating modifier
-    floating_modifier $mod
+# Floating modifier
+floating_modifier $mod
 
-    # Reload the configuration file
-    bindsym $mod+Shift+c reload
+# Reload the configuration file
+bindsym $mod+Shift+c reload
 
-    # Exit i3
-    bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'
+# Exit i3
+bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'
 #
 # Moving around:
 #
-    # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+# Or use $mod+[up|down|left|right]
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
+# Move the focused window with the same, but add Shift
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+# Ditto, with arrow keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 #
 # Workspaces:
 #
-    # Switch to workspace
-    bindsym $mod+1 workspace 1
-    bindsym $mod+2 workspace 2
-    bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
-    # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace 1
-    bindsym $mod+Shift+2 move container to workspace 2
-    bindsym $mod+Shift+3 move container to workspace 3
-    bindsym $mod+Shift+4 move container to workspace 4
-    bindsym $mod+Shift+5 move container to workspace 5
-    bindsym $mod+Shift+6 move container to workspace 6
-    bindsym $mod+Shift+7 move container to workspace 7
-    bindsym $mod+Shift+8 move container to workspace 8
-    bindsym $mod+Shift+9 move container to workspace 9
-    bindsym $mod+Shift+0 move container to workspace 10
+# Switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
 #
 # Layout stuff:
 #
-    # Split current container
-    bindsym $mod+b split h
-    bindsym $mod+v split v
+# Split current container
+bindsym $mod+b split h
+bindsym $mod+v split v
 
-    # Switch layout
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+# Switch layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
-    # Make current focus fullscreen
-    bindsym $mod+f fullscreen
+# Make current focus fullscreen
+bindsym $mod+f fullscreen
 
-    # Toggle floating mode
-    bindsym $mod+Shift+space floating toggle
+# Toggle floating mode
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+y floating toggle
 
-    # Toggle focus between tiling and floating
-    bindsym $mod+space focus mode_toggle
+# Toggle focus between tiling and floating
+bindsym $mod+space focus mode_toggle
 
-    # Move focus to parent container
-    bindsym $mod+a focus parent
+# Move focus to parent container
+bindsym $mod+a focus parent
 #
 # Scratchpad:
 #
-    # Move to scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+# Move to scratchpad
+bindsym $mod+Shift+minus move scratchpad
 
-    # Show next scratchpad window or hide the focused scratchpad window
-    bindsym $mod+minus scratchpad show
+# Show next scratchpad window or hide the focused scratchpad window
+bindsym $mod+minus scratchpad show
 #
 # Resizing containers:
 #
@@ -185,6 +187,6 @@ bar {
 }
 
 # Input layout (i3 does not manage input directly, use `setxkbmap`)
-exec_always --no-startup-id setxkbmap -layout "de" -variant "nodeadkeys" -option "grp:win_space_toggle"
+exec_always --no-startup-id setxkbmap -layout de -variant nodeadkeys -option ""
 
 gaps inner 10px
