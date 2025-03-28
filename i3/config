@@ -43,6 +43,9 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# file explorer
+bindsym $mod+Shift+e exec thunar
+
 ### Key bindings
 #
 # Basics:
@@ -66,7 +69,7 @@ floating_modifier $mod
 bindsym $mod+Shift+c reload
 
 # Exit i3
-bindsym $mod+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'
+bindsym $mod+Ctrl+Shift+e exec --no-startup-id i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'
 #
 # Moving around:
 #
@@ -189,6 +192,10 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
+# for_window [class="chrome" title=".*Stunden-Meldung.*"] floating enable
+# for_window [class="Firefox" title=".*Stunden-Meldung.*"] floating enable
+for_window [title=".*Stunden-Meldung.*"] floating enable
 
 # Input layout (i3 does not manage input directly, use `setxkbmap`)
 exec_always --no-startup-id setxkbmap -layout de -variant nodeadkeys -option ""
