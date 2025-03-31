@@ -48,3 +48,6 @@ fzd() {
 
     fd --type d --hidden --exclude .git --ignore-file .gitignore . "$start_dir" | fzf
 }
+
+# source $HOME/.zshrc.local if it exists to allow for local configurations
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
