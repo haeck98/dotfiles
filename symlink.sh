@@ -15,6 +15,9 @@ ln -f -s "$PWD/i3/" $HOME/.config/
 # symlink nvim config
 ln -f -s "$PWD/nvim/" $HOME/.config/
 
+# symlink kmonad config
+ln -f -s "$PWD/kmonad/" $HOME/.config/
+
 # symlink alacritty config
 ln -f -s "$PWD/alacritty/" $HOME/.config/
 
