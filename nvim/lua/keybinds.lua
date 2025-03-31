@@ -58,6 +58,12 @@ mapKey{desc="", {"i"}, "jk", "<Esc>"}
 -- clear line
 mapKey{desc="Clear current line", {"n"}, "<Leader>c", "cc<Esc>"}
 
+-- lsp
+vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts)
+vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
+vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, opts)
+vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, opts)
+
 -- Telescope
 mapKey{"n", "<Leader>sf", ":Telescope find_files<CR>"}
 mapKey{"n", "<Leader>sg", ":Telescope live_grep<CR>"}

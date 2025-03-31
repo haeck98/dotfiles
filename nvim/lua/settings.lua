@@ -25,3 +25,8 @@ vim.g.wrap = true
 vim.g.wrapindent = true
 
 vim.opt.scrolloff = 5
+
+vim.diagnostic.config({
+    virtual_lines = true
+})
+
