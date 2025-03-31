@@ -61,6 +61,7 @@ mapKey{desc="Clear current line", {"n"}, "<Leader>c", "cc<Esc>"}
 -- Telescope
 mapKey{"n", "<Leader>sf", ":Telescope find_files<CR>"}
 mapKey{"n", "<Leader>sg", ":Telescope live_grep<CR>"}
+mapKey{"n", "<Leader>sb", ":Telescope current_buffer_fuzzy_find<CR>"}
 mapKey{"n", "<Leader>ss", ":Telescope lsp_document_symbols<CR>"}
 mapKey{"n", "<Leader>sw", ":Telescope lsp_workspace_symbols<CR>"}
 mapKey{"n", "<Leader>sr", ":Telescope lsp_references<CR>"}
