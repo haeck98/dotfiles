@@ -1,5 +1,6 @@
 (defcfg
-  input  (device-file "/dev/input/event19") ;; Replace with correct event file
+  ;; You need to add the udev rule to create the symlink (/dev/input/eventXXX -> /dev/input/LogitechMXKeysBluetooth)
+  input  (device-file "/dev/input/LogitechMXKeysBluetooth")
   output (uinput-sink "kmonad-german")
   fallthrough true
   allow-cmd true

@@ -1,0 +1,1 @@
+KERNEL=="event*", SUBSYSTEM=="input", ATTRS{uniq}!="", ATTRS{name}=="MX Keys Keyboard", SYMLINK+="input/LogitechMXKeysBluetooth"

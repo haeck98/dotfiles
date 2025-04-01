@@ -1,0 +1,1 @@
+ACTION=="add", KERNEL=="event*", SUBSYSTEM=="input", ATTRS{uniq}!="", ATTRS{name}=="MX Keys Keyboard", TAG+="systemd", ENV{SYSTEMD_WANTS}+="kmonad.service"

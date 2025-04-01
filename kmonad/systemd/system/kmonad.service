@@ -1,0 +1,17 @@
+[Unit]
+Description=KMonad for German Home Row Mods
+# After=multi-user.target
+#After=dev-input-LogitechMXKeysBluetooth.device
+#BindsTo=dev-input-LogitechMXKeysBluetooth.device
+
+[Service]
+ExecStart=/usr/bin/kmonad /home/haecker/.config/kmonad/LogitechMXKeysBluetooth.kbd
+Restart=always
+User=root
+Group=root
+Environment=DISPLAY=:0
+WorkingDirectory=/home/haecker
+
+#[Install]
+#WantedBy=default.target
+
