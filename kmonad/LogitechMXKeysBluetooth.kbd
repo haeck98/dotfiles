@@ -13,5 +13,5 @@
 (deflayer homerow
   (tap-hold 200 a lctrl) (tap-hold 200 s lalt) (tap-hold 200 d lmeta) (tap-hold 200 f lshift)
   g h
-  (tap-hold 200 j lshift) (tap-hold 200 k lmeta) (tap-hold 200 l ralt) (tap-hold 200 ; lctrl)
+  (tap-hold 200 j lshift) (tap-hold 200 k lmeta) (tap-hold 200 l lalt) (tap-hold 200 ; lctrl)
 )
