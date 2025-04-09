@@ -1,0 +1,16 @@
+(defcfg
+  input  (device-file "/dev/input/by-id/usb-Keychron_Keychron_K4_Pro-event-kbd") ;; Replace with correct event file
+  output (uinput-sink "kmonad-german")
+  fallthrough true
+  allow-cmd true
+)
+
+(defsrc
+    a    s    d    f    g    h    j    k    l    ;
+)
+
+(deflayer homerow
+  (tap-hold 200 a lctrl) (tap-hold 200 s lalt) (tap-hold 200 d lmeta) (tap-hold 200 f lshift)
+  g h
+  (tap-hold 200 j lshift) (tap-hold 200 k lmeta) (tap-hold 200 l lalt) (tap-hold 200 ; lctrl)
+)
