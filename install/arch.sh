@@ -18,3 +18,5 @@ sudo pacman -S --noconfirm neovim python fzf ripgrep zoxide tmux alacritty
 
 npm i -g neovim tree-sitter
 
+# tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
