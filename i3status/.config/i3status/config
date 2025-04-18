@@ -16,7 +16,7 @@ order += "volume master"
 # order += "ipv6"
 # order += "wireless _first_"
 order += "ethernet _first_"
-# order += "battery all"
+order += "battery all"
 # order += "disk /"
 # order += "load"
 order += "memory"
@@ -41,6 +41,10 @@ ethernet _first_ {
 
 battery all {
         format = "%status %percentage %remaining"
+    last_full_capacity = true
+    threshold_type = time
+    low_threshold = 5
+    format_down = "Battery down"
 }
 
 disk "/" {
