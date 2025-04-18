@@ -13,12 +13,14 @@ set $term alacritty
 # set $term ghostty
 set $menu dmenu_run
 
+exec --no-startup-id setxkbmap de -variant nodeadkeys
+
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
-exec_always --no-startup-id picom -b -f
-exec_always --no-startup-id /usr/lib/gsd-xsettings
-exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg
-exec_always --no-startup-id dex --autostart --environment i3
+# exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
+exec --no-startup-id picom -b -f
+exec --no-startup-id /usr/lib/gsd-xsettings
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg
+exec --no-startup-id dex --autostart --environment i3
 
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
